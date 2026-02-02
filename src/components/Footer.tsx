@@ -101,7 +101,7 @@ export default function Footer() {
             © {currentYear} Atma - Sanación Álmica. Todos los derechos reservados.
           </p>
           <p className="text-atma-gray text-xs mt-2">
-            Hecho por Lolina con ❤️ para el despertar del alma. 
+            Hecho por <a href="https://lolina-solutions.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline">Lolina</a> con ❤️ para el despertar del alma.
           </p>
         </div>
       </div>
