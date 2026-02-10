@@ -18,7 +18,9 @@ export default function Contact() {
           </h2>
           
           <p className="text-xl text-atma-slate mb-12 leading-relaxed">
-            Si tu alma te ha guiado hasta aquí, es porque hay algo en ti que está listo para despertar. Te escucho con el corazón abierto.
+            Si tu alma te ha guiado hasta aquí, es porque hay algo en ti que está listo para despertar. </p>
+            <p className="text-xl text-atma-slate mb-12 leading-relaxed">
+              Te escucho con el corazón abierto.
           </p>
 
           <div className="card-atma">
@@ -151,7 +153,7 @@ export default function Contact() {
             transition={{ delay: 0.6 }}
             className="mt-12 p-8 bg-gradient-to-br from-atma-blue/10 to-atma-cream/30 rounded-2xl"
           >
-            <p className="text-lg text-atma-navy italic font-light">
+            <p className="text-sm text-atma-slate/70">
              Atma: Del sánscrito, “ser verdadero” o chispa divina individual.
             </p>
           </motion.div>

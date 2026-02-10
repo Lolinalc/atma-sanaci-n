@@ -1,10 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 import Image from 'next/image';
 import { testimonials } from '@/lib/data';
 
 export default function Testimonials() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = scrollRef.current.offsetWidth * 0.85;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section id="testimonios" className="section-padding bg-gradient-to-br from-atma-cream/20 to-white">
       <div className="container-atma">
@@ -23,9 +36,34 @@ export default function Testimonials() {
             Compartiendo el camino de sanación y transformación
           </p>
 
-          {/* Contenedor con scroll horizontal */}
-          <div className="relative">
-            <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide">
+          {/* Contenedor con scroll horizontal y flechas */}
+          <div className="relative group">
+            {/* Flecha izquierda */}
+            <button
+              onClick={() => scroll('left')}
+              aria-label="Testimonio anterior"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-atma-cream flex items-center justify-center text-atma-blue hover:bg-atma-blue hover:text-white transition-all duration-300 hover:scale-110 -translate-x-2 md:-translate-x-4 opacity-0 group-hover:opacity-100 focus:opacity-100"
+            >
+              <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Flecha derecha */}
+            <button
+              onClick={() => scroll('right')}
+              aria-label="Siguiente testimonio"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-atma-cream flex items-center justify-center text-atma-blue hover:bg-atma-blue hover:text-white transition-all duration-300 hover:scale-110 translate-x-2 md:translate-x-4 opacity-0 group-hover:opacity-100 focus:opacity-100"
+            >
+              <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide"
+            >
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.id}
@@ -53,7 +91,7 @@ export default function Testimonials() {
                         </div>
 
                         <blockquote className="text-atma-slate italic text-base md:text-lg leading-relaxed mb-6">
-                          "{testimonial.text}"
+                          &ldquo;{testimonial.text}&rdquo;
                         </blockquote>
 
                         {/* Información del cliente */}
@@ -85,14 +123,20 @@ export default function Testimonials() {
               ))}
             </div>
 
-            {/* Indicadores de scroll */}
-            <div className="flex justify-center mt-6 gap-2">
+            {/* Indicadores de scroll con hint */}
+            <div className="flex justify-center mt-6 gap-2 items-center">
+              <svg className="w-4 h-4 text-atma-blue/50 animate-pulse" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
               {testimonials.map((_, index) => (
                 <div
                   key={index}
                   className="w-2 h-2 rounded-full bg-atma-blue/30"
                 />
               ))}
+              <svg className="w-4 h-4 text-atma-blue/50 animate-pulse" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
             </div>
           </div>
 

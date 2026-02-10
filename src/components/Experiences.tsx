@@ -1,17 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import ServiceCard from './ServiceCard';
 import { services, ceremonies, workshops } from '@/lib/data';
 
 export default function Experiences() {
   const [expandedCeremony, setExpandedCeremony] = useState<string | null>(null);
+  const ceremoniesRef = useRef<HTMLDivElement>(null);
 
   const toggleCeremony = (id: string) => {
     setExpandedCeremony(expandedCeremony === id ? null : id);
   };
+
+  const scrollCeremonies = (direction: 'left' | 'right') => {
+    if (ceremoniesRef.current) {
+      const scrollAmount = ceremoniesRef.current.offsetWidth * 0.85;
+      ceremoniesRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <section id="experiencias" className="section-padding bg-gradient-to-br from-white via-atma-cream/30 to-atma-blue/10">
       <div className="container-atma breathe-space">
@@ -30,8 +42,7 @@ export default function Experiences() {
             En este espacio podrás reconocer los mensajes sutiles del alma, sanar emociones, dolencias físicas, patrones repetitivos o conflictos personales.
           </p>
           <p className="text-lg text-atma-blue mt-4 font-medium">
-            Te acompaño a conocer la fuerza de tu vulnerabilidad y reconocer el susurro de tu alma.
-          </p>
+Te acompaño a recordar tu poder personal y escuchar el susurro de tu alma          </p>
         </motion.div>
 
         {/* Services Grid */}
@@ -55,9 +66,34 @@ export default function Experiences() {
             Espacios para sanar en colectivo, siempre reconociendo tu proceso personal. Disfrutamos de espacios sagrados compartiendo rituales, cacao y otras medicinas naturales.
           </p>
 
-          {/* Contenedor con scroll horizontal */}
-          <div className="relative">
-            <div className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide">
+          {/* Contenedor con scroll horizontal y flechas */}
+          <div className="relative group">
+            {/* Flecha izquierda */}
+            <button
+              onClick={() => scrollCeremonies('left')}
+              aria-label="Anterior ceremonia"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-atma-cream flex items-center justify-center text-atma-blue hover:bg-atma-blue hover:text-white transition-all duration-300 hover:scale-110 -translate-x-2 md:-translate-x-4 opacity-0 group-hover:opacity-100 focus:opacity-100"
+            >
+              <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Flecha derecha */}
+            <button
+              onClick={() => scrollCeremonies('right')}
+              aria-label="Siguiente ceremonia"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 backdrop-blur-sm shadow-lg border border-atma-cream flex items-center justify-center text-atma-blue hover:bg-atma-blue hover:text-white transition-all duration-300 hover:scale-110 translate-x-2 md:translate-x-4 opacity-0 group-hover:opacity-100 focus:opacity-100"
+            >
+              <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div
+              ref={ceremoniesRef}
+              className="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory scrollbar-hide"
+            >
               {ceremonies.map((ceremony, index) => (
                 <motion.div
                   key={ceremony.id}
@@ -176,14 +212,20 @@ export default function Experiences() {
               ))}
             </div>
 
-            {/* Indicadores de scroll */}
-            <div className="flex justify-center mt-6 gap-2">
+            {/* Indicadores de scroll con hint */}
+            <div className="flex justify-center mt-6 gap-2 items-center">
+              <svg className="w-4 h-4 text-atma-blue/50 animate-pulse" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M15 19l-7-7 7-7" />
+              </svg>
               {ceremonies.map((_, index) => (
                 <div
                   key={index}
                   className="w-2 h-2 rounded-full bg-atma-blue/30"
                 />
               ))}
+              <svg className="w-4 h-4 text-atma-blue/50 animate-pulse" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
             </div>
           </div>
         </motion.div>
@@ -199,7 +241,7 @@ export default function Experiences() {
             Talleres
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {workshops.map((workshop, index) => (
               <motion.div
                 key={workshop.id}
@@ -258,16 +300,28 @@ export default function Experiences() {
                     rel="noopener noreferrer"
                     className="btn-primary text-sm"
                   >
-                    Inscribirme
+                    Quiero más información
                   </a>
                 ) : (
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs ${
-                    workshop.status === 'coming-soon'
-                      ? 'bg-atma-cream text-atma-navy'
-                      : 'bg-atma-blue/20 text-atma-blue'
-                  }`}>
-                    {workshop.status === 'coming-soon' ? 'Próximamente' : 'Grabado'}
-                  </span>
+                  <div className="space-y-3">
+                    <span className={`inline-block px-3 py-1 rounded-full text-xs ${
+                      workshop.status === 'coming-soon'
+                        ? 'bg-atma-cream text-atma-navy'
+                        : 'bg-atma-blue/20 text-atma-blue'
+                    }`}>
+                      {workshop.status === 'coming-soon' ? 'Próximamente' : 'Grabado'}
+                    </span>
+                    <div>
+                      <a
+                        href={`https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20el%20${encodeURIComponent(workshop.title)}.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary text-sm"
+                      >
+                        Quiero más información
+                      </a>
+                    </div>
+                  </div>
                 )}
               </motion.div>
             ))}

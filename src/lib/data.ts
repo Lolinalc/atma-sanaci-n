@@ -2,9 +2,26 @@ import { Service, Ceremony, Workshop, Testimonial } from '@/types';
 
 export const services: Service[] = [
   {
+    id: 'terapia-almica',
+    title: 'Terapia Álmica',
+    description: 'Cada sesión es única y todas las historias, personales. Comenzamos haciendo una lectura álmica para comprender en qué momento estás, qué se te invita a trascender para poder vivir de otra manera y junto con ello encontrarás herramientas para que puedas aplicar en tu día. En los procesos de sanación, pongo a disposición todas mis herramientas para que liberemos el dolor, sanemos lo que nos quita la paz  y lleguemos a la fuerza vital de tu interior, desarrollando la escucha de tu alma,  alineandonos así con tu proósito y camino de vida.',
+    duration: '1 hora 15 minutos',
+    price: '$700 MXN',
+    priceInternational: '$900 MXN',
+    features: [
+      'Lectura álmica personalizada',
+      'Comprensión del momento evolutivo',
+      'Herramientas para trascender',
+      'Liberación y sanación del dolor',
+      'Sesión presencial o vía Zoom.'
+    ],
+    cta: 'Agenda tu sesión',
+    ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20la%20Terapia%20%C3%81lmica.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
+  },
+  {
     id: 'lectura-tarot',
-    title: 'Lectura de Tarot',
-    description: 'Este tarot no busca predecir ni alimentar la curiosidad, sino ser una guía que escucha, revela y orienta. A través de las cartas, exploramos lo que se mueve en tu interior: bloqueos, heridas o patrones que requieren atención, y los aprendizajes que emergen en tu camino. Más que ofrecer respuestas externas, esta lectura fomenta un diálogo con tu mundo interno. Las cartas no deciden por ti, sino que te brindan claridad, responsabilidad y poder personal. Perfecto si estás en un momento de introspección y deseas mirarte con honestidad y compasión',
+    title: 'Tarot Almico',
+    description: 'Este tarot no busca predecir ni alimentar la curiosidad, sino ser una guía que escucha, revela y orienta. A través de las cartas, exploramos lo que se mueve en tu interior: bloqueos, heridas o patrones inconscientes que requieren atención, para integrar los aprendizajes que traen para ti. Más que ofrecer respuestas externas, esta lectura fomenta un diálogo con tu mundo interno. Las cartas no deciden por ti, sino que te brindan claridad, responsabilidad y poder personal. Perfecto si estás en un momento de introspección y deseas mirarte con honestidad y compasión.',
   duration: '1 hora 15 minutos',
     price: '$700 MXN',
     priceInternational: '$900 MXN',
@@ -19,59 +36,10 @@ export const services: Service[] = [
     cta: 'Inicia tu viaje',
     ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20la%20Lectura%20de%20Tarot.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
   },
-   {
-    id: 'terapia-almica',
-    title: 'Terapia Álmica',
-    description: 'Cada sesión es única y todos los procesos son personales. Comenzamos haciendo una lectura álmica para comprender en qué momento evolutivo estás, qué se te invita a trascender y junto con ello herramientas para que puedas aplicar de manera consciente. Te acompaño a liberar el dolor, a reconocer tu fuerza interior, tu propósito y tu camino.',
-    duration: '1 hora 15 minutos',
-    price: '$700 MXN',
-    priceInternational: '$900 MXN',
-    features: [
-      'Lectura álmica personalizada',
-      'Comprensión del momento evolutivo',
-      'Herramientas para trascender',
-      'Liberación y sanación del dolor',
-      'Sesión vía Zoom'
-    ],
-    cta: 'Agenda tu sesión',
-    ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20la%20Terapia%20%C3%81lmica.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
-  },
-  {
-    id: 'yin-yoga-grupal',
-    title: 'Yin Yoga - Sesiones Grupales',
-    description: 'Nos vemos todos los martes 7:30pm (CDMX) vía Zoom para liberar el cuerpo y junto con ello, nuestra energía estancada. Reconozco el cuerpo como portal para conectar con nuestra energía sutil.',
-    duration: 'Martes 7:30pm CDMX',
-    price: '$50 MXN',
-    features: [
-      'Sesiones semanales en vivo',
-       'Meditación activa',
-      'Liberación de energía estancada',
-      'Fortalecimiento mental',
-      'Conexión cuerpo-mente'
-    ],
-    cta: 'Quiero participar',
-    ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20las%20Sesiones%20Grupales%20de%20Yin%20Yoga.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
-  },
-  {
-    id: 'yin-yoga-personal',
-    title: 'Yin Yoga - Procesos Personalizados',
-    description: 'Un espacio pensado para quienes atraviesan síntomas físicos o quienes buscan un proceso íntimo y personalizado de escucha y diálogo con el cuerpo. En los procesos sanamos desde la raíz. He acompañado procesos de tendinitis, hernias, crisis epiléptica, falsa ciática y problemas de movilidad en general.',
-    duration: '2-3 sesiones semanales por 1 mes',
-    price: '$3,000 - $4,000 MXN',
-    features: [
-      '2 o 3 sesiones semanales',
-      '1 sesión de biodescodificación incluida',
-      'Sanación desde la raíz',
-      'Recuperación de movilidad',
-      'Mejorías y bienestar desde la primera sesión'
-    ],
-    cta: 'Iniciar proceso',
-    ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20el%20Proceso%20Personalizado%20de%20Yin%20Yoga.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
-  },
   {
     id: 'sanacion-energetica',
     title: 'Sanación Energética',
-    description: 'Un espacio de acompañamiento para quienes atraviesan momentos de carga espiritual, energía estancada o señales del cuerpo que piden atención, y buscan alivio y comprensión profunda.',
+    description: 'Sesión de sanación profunda para quienes atraviesen bloqueos energéticos, procesos espirituales intensos, o malestares físicos persistentes en busca de alivio y comprensión.',
     duration: '2 horas',
     price: '$2,300 MXN',
     features: [
@@ -85,14 +53,47 @@ export const services: Service[] = [
     ],
     cta: 'Agendar limpieza',
     ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20la%20Sanaci%C3%B3n%20Energ%C3%A9tica.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
-  }
+  },
+  {
+    id: 'yin-yoga-grupal',
+    title: 'Yin Yoga - Sesiones Grupales',
+    description: 'Reconozco el cuerpo como portal para conectar con nuestra energía sutil. Nos vemos todos los martes 7:30pm (CDMX) vía Zoom para liberar el cuerpo y junto con ello, nuestra energía estancada.',
+    duration: 'Martes 7:30pm CDMX',
+    price: 'Aporte mínimo $30 MXN',
+    features: [
+      'Sesiones semanales en vivo',
+       'Meditación activa',
+      'Liberación de energía estancada',
+      'Fortalecimiento mental',
+      'Conexión cuerpo-mente'
+    ],
+    cta: 'Quiero participar',
+    ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20las%20Sesiones%20Grupales%20de%20Yin%20Yoga.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
+  },
+  {
+    id: 'yin-yoga-personal',
+    title: 'Yin Yoga - Procesos Personalizados',
+    description: 'Un espacio pensado para quienes atraviesan síntomas físicos o quienes buscan un proceso íntimo y personalizado de escucha y diálogo con el cuerpo. En los procesos no solo trabajamos desde el síntoma, sanamos desde la raíz. He acompañado procesos de: - tendinitis, hernias dorsales y lumbares, falsas ciáticas,crisis de movilidad,procesos neuromotores y dolores crónicos.',
+    duration: '2-3 sesiones semanales por 1 mes',
+    price: '$1,600 - $3,000 MXN',
+    features: [
+      '1 o 2 sesiones semanales',
+      'Sesión suelta $350',
+      '1 X semana $1600',
+      '2 x semana $3000',
+      'Incluye 1 sesión de terapia de biodescofidicación'
+    ],
+    cta: 'Iniciar proceso',
+    ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20el%20Proceso%20Personalizado%20de%20Yin%20Yoga.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
+  },
+  
 ];
 
 export const ceremonies: Ceremony[] = [
   {
     id: 'cumpleanos',
     title: 'Ceremonias de Cumpleaños',
-    description: 'Honramos tu nacimiento y tu estadía en el presente. Generaremos un espacio ritual para que junto con tus seres queridos honremos tu vida. Utilizamos los elementos de la naturaleza para agradecer el pasado y reconocer tu fuerza y esencia en el presente.',
+    description: 'Aquí nos reuniremos para honrar tu vida y tus relaciones. Generaremos un espacio ritual para que, junto con tus seres queridos, reconozcamos el valor de tu existencia. Integrando prácticas ancestrales chamánicas, agradeceremos tu vida y ofrendaremos nuestras intenciones para tu expansión personal.',
     duration: '2 horas',
     price: '$1,500 (1-8 personas) + $250 por persona extra',
     includes: [
@@ -106,7 +107,7 @@ export const ceremonies: Ceremony[] = [
   {
     id: 'despedida-mascotas',
     title: 'Ceremonia de Despedida de Mascotas',
-    description: 'Espacio terapéutico y ritual donde honramos la vida de los animalitos que nos permitieron cuidarles. Es ideal para agradecer y reconocer el propósito que tuvieron en nuestras vidas e integrar todo lo vivido.',
+    description: 'Espacio terapéutico y ritual donde honramos la vida de los animalitos que nos permitieron cuidarles. Es ideal para agradecer y reconocer el propósito que tuvieron en nuestras vidas e integrar todo lo vivido de una manera amorosa y en familia.',
     duration: '2 horas',
     price: '$1,500 por familia',
     includes: [
@@ -117,9 +118,23 @@ export const ceremonies: Ceremony[] = [
     ],
     image: '/images/Ceremoniaparaelalma.jpeg'
   },
+    {
+    id: 'conversanando',
+    title: 'Conver-sanando',
+    description: 'Encuentros creados para oficinas y/o grupos laborales y/o colectivos  que deseen un espacio de paz y calma. Esta sesiones ayudan a fortalecer los vínculos y la comunicación, creando encuentros genuinos desde la palabra, la meditación, el movimiento, y soundealing.',
+    duration: '1:30 horas',
+    price: '$1,500 por sesión',
+    includes: [
+      'Ludoterapia',
+      'Medicina de la palabra',
+        'Meditación guiada',
+    'Soundhealing para equilibrar cuerpo, mente y espíritu',
+    ],
+    image: '/images/comunidadalegre.png'
+  },
   {
     id: 'colectivas',
-    title: 'Ceremonias Colectivas',
+    title: 'Ceremonias Colectivas y Privadas',
     description: 'Creamos espacios sagrados de sanación colectiva, donde la palabra, el encuentro, la música medicina y la meditación se entrelazan para acompañar procesos de sanación.',
     duration: 'Variable',
     price: 'Variable según ceremonia',
@@ -155,18 +170,7 @@ export const workshops: Workshop[] = [
     date: 'Marzo 2026',
     status: 'coming-soon'
   },
-  {
-    id: 'limpias-humo',
-    title: 'Taller de Limpias con Humo',
-    description: 'Aprende técnicas ancestrales de limpieza energética con hierbas y sahumos.',
-    status: 'coming-soon'
-  },
-  {
-    id: 'banos-sanadores',
-    title: 'Taller de Baños Sanadores con Hierbas',
-    description: 'Descubre el poder curativo de las hierbas en baños rituales de sanación.',
-    status: 'coming-soon'
-  },
+  
   
 ];
 
@@ -234,23 +238,22 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const aboutContent = {
-  intro: 'Hola querido ser. Gracias por estar aquí y por leerme.',
+  intro: 'Hola querido ser...',
   story: [
-    'Soy Tamara, y mi camino comenzó muy temprano, cuando entendí que, cuando el cuerpo se enferma, el espíritu nos está mostrando una vía de sanación.',
+    'Soy Tamara, y mi camino de sanación comenzó muy temprano, hasta que entendí que, cuando el cuerpo se enferma, el espíritu nos está mostrando una vía de sanación.',
     'Desde que nací recibí diversos diagnósticos médicos que dificultaban mi desarrollo físico. Durante varios años utilicé máscaras que comprimían mi rostro; lo único que quedaba libre era mi mirada. Al mirarme al espejo, no siempre me reconocía y pasaba mucho tiempo preguntándome: ¿Quién soy?',
-    'A través de la mirada comencé a percibir imágenes, emociones, rostros y mundos desconocidos. Ahí comprendí que la mirada es un espejo del alma. Y mi alma tenía vidas y dolores, cosa que me asustaba, y confundía. Decidí cerrar esas exploraciónes por un largo tiempo.',
-    'Cuando la medicina alópata no ofrecía más respuestas, mi familia y yo nos abrimos a la sanación energética. Gracias a ese acompañamiento y a la fe compartida, mi cuerpo comenzó a responder de otra manera. Mis células modificaron su actuar.  Ese momento marcó mi vida y sembró una pregunta esencial: ¿Cómo se da la sanación?',
-    'Más adelante estudié Lic.teatro y trabajé con máscaras escénicas. Al usarlas, algo se abría: podía “ser”, expresarme, habitar otras voces sin juicio. Y por mas que me cuidaba, mi cuerpo se accidentaba. Con el tiempo comprendí que mi cuerpo también hablaba a través de síntomas y lesiones, me compartía mensajes de mi propia alma que no me permitía oír.',
-    'El dolor me llevó a estudiar biodescodificación, psicosomática, bio-neuro-emoción, PNL, Reiki, biomagnetismo, gemoterapia y sanación energética. Aprendí a escuchar al cuerpo, a la emoción y al espíritu como un mismo lenguaje.',
-    'Hoy integro todas estas herramientas en cada sesión, buscando coherencia entre mente, emoción y acción,  para acompañar procesos de alineación con el camino del alma,  ya que cada ser es un ser único, un pensamiento divino, una historia que merece ser vivida y disfrutada en dicha y plenitud absoluta.'
+    'A través de la mirada comencé a percibir imágenes, emociones, rostros y mundos desconocidos. Ahí comprendí que la mirada es un espejo del alma. Y mi alma tenía vidas y dolores que me asustaban, y confundían. Decidí cerrar esas exploraciónes por un largo tiempo.',
+    'Cuando la medicina alópata no ofrecía más respuestas, mi familia y yo nos abrimos a la sanación energética. Gracias a ese acompañamiento y a la fe compartida, mi cuerpo comenzó a responder de otra manera. Mis células modificaron su actuar y los médicos no comprendían qué pasó. Ese momento marcó mi vida y sembró una pregunta esencial: ¿Cómo se da la sanación? ¿Quién obró el milagro de la salud?',
+    'Más adelante estudié Lic.teatro y trabajé con máscaras escénicas. Al usarlas, algo se abría: podía “ser”, expresarme, habitar otras voces, como si fueran mías (entendí que todas las voces son mías, pero no todas me favorecen) . Y por mas que cuidaba mi cuerpo y alimentación, me accidentaba. Con el tiempo comprendí que mi cuerpo también hablaba a través de síntomas y lesiones, me compartía mensajes de mi propia alma que yo no me permitía oír.',
+    'El dolor me llevó a estudiar biodescodificación, psicosomática, bio-neuro-emoción, PNL, Reiki, biomagnetismo, y sanación energética. Aprendí a escuchar al cuerpo, a la emoción y al espíritu y a crear mi propio lenguaje donde integro todas mis áreas.',
+    'En mi metodología integro todas estas herramientas en cada sesión, buscando coherencia entre mente, emoción y acción, para acompañar procesos de alineación con el camino del alma, ya que cada ser es un ser único, un pensamiento divino, una historia que merece ser vivida y disfrutada en dicha y plenitud absoluta.'
   ],
   credentials: [
-    'Biodescodificadora (10 años de experiencia)',
-'Maestra de Yin Yoga (desde 2021)',
+    'Biodescodificadora',
+'Maestra de Yin Yoga',
 'Tarot y Runas',
     'Master Reiki',    
     'Biomagnetismo',
     'Sanación energética',
-    
   ]
 };
