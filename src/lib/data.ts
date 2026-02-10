@@ -102,7 +102,7 @@ export const ceremonies: Ceremony[] = [
       'Espacio sagrado personalizado',
     'Materiales incluidos'
     ],
-    image: '/images/ceremonia-cumpleaños.png'
+    image: '/images/ceremoniadecumpleaños.png'
   },
   {
     id: 'despedida-mascotas',
