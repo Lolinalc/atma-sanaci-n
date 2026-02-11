@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: 'terapia-almica',
     title: 'Terapia Álmica',
-    description: 'Cada sesión es única y todas las historias, personales. Comenzamos haciendo una lectura álmica para comprender en qué momento estás, qué se te invita a trascender para poder vivir de otra manera y junto con ello encontrarás herramientas para que puedas aplicar en tu día. En los procesos de sanación, pongo a disposición todas mis herramientas para que liberemos el dolor, sanemos lo que nos quita la paz  y lleguemos a la fuerza vital de tu interior, desarrollando la escucha de tu alma,  alineandonos así con tu proósito y camino de vida.',
+    description: '"Cada sesión es única y todas las historias, personales." <br /> Comenzamos haciendo una lectura álmica para comprender en qué momento estás, qué se te invita a trascender para poder vivir de otra manera y junto con ello encontrarás herramientas para que puedas aplicar en tu día. En los procesos de sanación, pongo a disposición todas mis herramientas para que liberemos el dolor, sanemos lo que nos quita la paz  y lleguemos a la fuerza vital de tu interior, desarrollando la escucha de tu alma,  alineandonos así con tu proósito y camino de vida.',
     duration: '1 hora 15 minutos',
     price: '$700 MXN',
     priceInternational: '$900 MXN',
@@ -57,7 +57,7 @@ export const services: Service[] = [
   {
     id: 'yin-yoga-grupal',
     title: 'Yin Yoga - Sesiones Grupales',
-    description: 'Reconozco el cuerpo como portal para conectar con nuestra energía sutil. Nos vemos todos los martes 7:30pm (CDMX) vía Zoom para liberar el cuerpo y junto con ello, nuestra energía estancada.',
+    description: '"Reconozco el cuerpo como portal para conectar con nuestra energía sutil." <br /> Nos vemos todos los martes 7:30pm (CDMX) vía Zoom para liberar el cuerpo y junto con ello, nuestra energía estancada.',
     duration: 'Martes 7:30pm CDMX',
     price: 'Aporte mínimo $30 MXN',
     features: [
@@ -73,7 +73,7 @@ export const services: Service[] = [
   {
     id: 'yin-yoga-personal',
     title: 'Yin Yoga - Procesos Personalizados',
-    description: 'Un espacio pensado para quienes atraviesan síntomas físicos o quienes buscan un proceso íntimo y personalizado de escucha y diálogo con el cuerpo. En los procesos no solo trabajamos desde el síntoma, sanamos desde la raíz. He acompañado procesos de: - tendinitis, hernias dorsales y lumbares, falsas ciáticas,crisis de movilidad,procesos neuromotores y dolores crónicos.',
+    description: 'Un espacio pensado para quienes atraviesan síntomas físicos o quienes buscan un proceso íntimo y personalizado de escucha y diálogo con el cuerpo. En los procesos no sólo trabajamos el síntoma, sanamos desde la raíz. He acompañado procesos de: - tendinitis, hernias dorsales y lumbares, falsas ciáticas,crisis de movilidad,procesos neuromotores y dolores crónicos.',
     duration: '2-3 sesiones semanales por 1 mes',
     price: '$1,600 - $3,000 MXN',
     features: [
@@ -238,7 +238,7 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const aboutContent = {
-  intro: 'Hola querido ser...',
+  intro: 'Hola querido ser, gracias por leerme...',
   story: [
     'Soy Tamara, y mi camino de sanación comenzó muy temprano, hasta que entendí que, cuando el cuerpo se enferma, el espíritu nos está mostrando una vía de sanación.',
     'Desde que nací recibí diversos diagnósticos médicos que dificultaban mi desarrollo físico. Durante varios años utilicé máscaras que comprimían mi rostro; lo único que quedaba libre era mi mirada. Al mirarme al espejo, no siempre me reconocía y pasaba mucho tiempo preguntándome: ¿Quién soy?',

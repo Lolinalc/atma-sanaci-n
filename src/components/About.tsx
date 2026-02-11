@@ -23,63 +23,34 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xl text-atma-blue font-medium text-center italic mb-12"
+            className="text-lg md:text-xl text-atma-slate/90 italic text-center mb-12 max-w-3xl mx-auto"
           >
             {aboutContent.intro}
           </motion.p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-8 lg:gap-12 mb-12">
-            {/* Columna izquierda: Imagen + Credenciales */}
-            <div className="flex flex-col gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative"
-              >
-                <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/Sanaciondelalma.JPG"
-                    alt="Tamara - Sanación Álmica"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] lg:grid-rows-[auto_auto] gap-8 lg:gap-12 mb-12">
+            {/* Imagen */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative order-1 lg:col-start-1 lg:row-start-1"
+            >
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/Sanaciondelalma.JPG"
+                  alt="Tamara - Sanación Álmica"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="card-atma"
-              >
-                <h3 className="font-atteron text-xl md:text-2xl text-atma-navy mb-4 text-center">
-                  Con más de 10 años acompañando procesos personales
-                </h3>
-
-                <div className="grid grid-cols-1 gap-3">
-                  {aboutContent.credentials.map((credential, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-atma-cream/30 transition-colors"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-atma-blue flex-shrink-0" />
-                      <span className="text-atma-navy text-sm md:text-base">{credential}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Columna derecha: Story completa */}
-            <div className="space-y-6 text-atma-slate leading-relaxed flex flex-col justify-center">
+            {/* Story / Descripción */}
+            <div className="space-y-6 text-atma-slate leading-relaxed flex flex-col justify-center order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
               {aboutContent.story.map((paragraph, index) => (
                 <motion.p
                   key={index}
@@ -93,6 +64,34 @@ export default function About() {
                 </motion.p>
               ))}
             </div>
+
+            {/* Credenciales */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="card-atma order-3 lg:col-start-1 lg:row-start-2"
+            >
+              <h3 className="font-atteron text-xl md:text-2xl text-atma-navy mb-4 text-center">
+                Con más de 10 años acompañando procesos personales
+              </h3>
+
+              <div className="grid grid-cols-1 gap-3">
+                {aboutContent.credentials.map((credential, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05 }}
+                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-atma-cream/30 transition-colors"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-atma-blue flex-shrink-0" />
+                    <span className="text-atma-navy text-sm md:text-base">{credential}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           <motion.div

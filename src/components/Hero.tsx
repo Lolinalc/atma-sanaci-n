@@ -90,9 +90,8 @@ export default function Hero() {
             </p>
 
             <p className="text-lg md:text-xl text-atma-slate/90 italic">
-              Atma es el recuerdo del Ser divino que somos,
-            </p>
-            <p className="text-lg md:text-xl text-atma-slate/90 italic">
+              Atma es el recuerdo del ser divino que somos,
+            <br />
               es volver a tu centro.
             </p>
           </motion.div>

@@ -25,9 +25,10 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           {service.title}
         </h3>
 
-        <p className="text-atma-slate leading-relaxed">
-          {service.description}
-        </p>
+        <p
+          className="text-atma-slate leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: service.description }}
+        />
 
         {/* Botón para expandir */}
         <button
