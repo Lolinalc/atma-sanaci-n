@@ -51,7 +51,7 @@ export const services: Service[] = [
       'Presencial o online.',
 
     ],
-    cta: 'Agendar limpieza',
+    cta: 'Agenda tu sesión',
     ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20la%20Sanaci%C3%B3n%20Energ%C3%A9tica.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
   },
   {
@@ -238,7 +238,7 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const aboutContent = {
-  intro: 'Hola querido ser, gracias por leerme...',
+  intro: 'Hola querido ser, te comparto mi camino.',
   story: [
     'Soy Tamara, y mi camino de sanación comenzó muy temprano, hasta que entendí que, cuando el cuerpo se enferma, el espíritu nos está mostrando una vía de sanación.',
     'Desde que nací recibí diversos diagnósticos médicos que dificultaban mi desarrollo físico. Durante varios años utilicé máscaras que comprimían mi rostro; lo único que quedaba libre era mi mirada. Al mirarme al espejo, no siempre me reconocía y pasaba mucho tiempo preguntándome: ¿Quién soy?',
