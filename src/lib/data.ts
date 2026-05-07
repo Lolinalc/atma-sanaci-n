@@ -6,8 +6,6 @@ export const services: Service[] = [
     title: 'Terapia Álmica',
     description: '"Cada sesión es única y todas las historias, personales." <br /> Comenzamos haciendo una lectura álmica para comprender en qué momento estás, qué se te invita a trascender para poder vivir de otra manera y junto con ello encontrarás herramientas para que puedas aplicar en tu día. En los procesos de sanación, pongo a disposición todas mis herramientas para que liberemos el dolor, sanemos lo que nos quita la paz  y lleguemos a la fuerza vital de tu interior, desarrollando la escucha de tu alma,  alineandonos así con tu proósito y camino de vida.',
     duration: '1 hora 15 minutos',
-    price: '$700 MXN',
-    priceInternational: '$900 MXN',
     features: [
       'Lectura álmica personalizada',
       'Comprensión del momento evolutivo',
@@ -23,8 +21,6 @@ export const services: Service[] = [
     title: 'Tarot Almico',
     description: 'Este tarot no busca predecir ni alimentar la curiosidad, sino ser una guía que escucha, revela y orienta. A través de las cartas, exploramos lo que se mueve en tu interior: bloqueos, heridas o patrones inconscientes que requieren atención, para integrar los aprendizajes que traen para ti. Más que ofrecer respuestas externas, esta lectura fomenta un diálogo con tu mundo interno. Las cartas no deciden por ti, sino que te brindan claridad, responsabilidad y poder personal. Perfecto si estás en un momento de introspección y deseas mirarte con honestidad y compasión.',
   duration: '1 hora 15 minutos',
-    price: '$700 MXN',
-    priceInternational: '$900 MXN',
     features: [
       'Lectura personalizada de tarot',
       'Exploración de bloqueos y patrones',
@@ -41,7 +37,6 @@ export const services: Service[] = [
     title: 'Sanación Energética',
     description: 'Sesión de sanación profunda para quienes atraviesen bloqueos energéticos, procesos espirituales intensos, o malestares físicos persistentes en busca de alivio y comprensión.',
     duration: '2 horas',
-    price: '$2,300 MXN',
     features: [
       'Limpieza energética profunda',
       'Liberación de bloqueos',
@@ -59,7 +54,6 @@ export const services: Service[] = [
     title: 'Yin Yoga - Sesiones Grupales',
     description: '"Reconozco el cuerpo como portal para conectar con nuestra energía sutil." <br /> Nos vemos todos los martes 7:30pm (CDMX) vía Zoom para liberar el cuerpo y junto con ello, nuestra energía estancada.',
     duration: 'Martes 7:30pm CDMX',
-    price: 'Aporte mínimo $30 MXN',
     features: [
       'Sesiones semanales en vivo',
        'Meditación activa',
@@ -75,7 +69,6 @@ export const services: Service[] = [
     title: 'Yin Yoga - Procesos Personalizados',
     description: 'Un espacio pensado para quienes atraviesan síntomas físicos o quienes buscan un proceso íntimo y personalizado de escucha y diálogo con el cuerpo. En los procesos no sólo trabajamos el síntoma, sanamos desde la raíz. He acompañado procesos de: - tendinitis, hernias dorsales y lumbares, falsas ciáticas,crisis de movilidad,procesos neuromotores y dolores crónicos.',
     duration: '2-3 sesiones semanales por 1 mes',
-    price: '$1,600 - $3,000 MXN',
     features: [
       '1 o 2 sesiones semanales',
       'Sesión suelta $350',
@@ -95,7 +88,6 @@ export const ceremonies: Ceremony[] = [
     title: 'Ceremonias de Cumpleaños',
     description: 'Aquí nos reuniremos para honrar tu vida y tus relaciones. Generaremos un espacio ritual para que, junto con tus seres queridos, reconozcamos el valor de tu existencia. Integrando prácticas ancestrales chamánicas, agradeceremos tu vida y ofrendaremos nuestras intenciones para tu expansión personal.',
     duration: '2 horas',
-    price: '$1,500 (1-8 personas) + $250 por persona extra',
     includes: [
       'Limpia con sahumo a todos los participantes',
       'Ritual con elementos naturales',
@@ -109,7 +101,6 @@ export const ceremonies: Ceremony[] = [
     title: 'Ceremonia de Despedida de Mascotas',
     description: 'Espacio terapéutico y ritual donde honramos la vida de los animalitos que nos permitieron cuidarles. Es ideal para agradecer y reconocer el propósito que tuvieron en nuestras vidas e integrar todo lo vivido de una manera amorosa y en familia.',
     duration: '2 horas',
-    price: '$1,500 por familia',
     includes: [
       'Proceso terapéutico y ritual',
       'Integración amorosa del proceso',
@@ -123,7 +114,6 @@ export const ceremonies: Ceremony[] = [
     title: 'Conver-sanando',
     description: 'Encuentros creados para oficinas y/o grupos laborales y/o colectivos  que deseen un espacio de paz y calma. Esta sesiones ayudan a fortalecer los vínculos y la comunicación, creando encuentros genuinos desde la palabra, la meditación, el movimiento, y soundealing.',
     duration: '1:30 horas',
-    price: '$1,500 por sesión',
     includes: [
       'Ludoterapia',
       'Medicina de la palabra',
@@ -137,7 +127,6 @@ export const ceremonies: Ceremony[] = [
     title: 'Ceremonias Colectivas y Privadas',
     description: 'Creamos espacios sagrados de sanación colectiva, donde la palabra, el encuentro, la música medicina y la meditación se entrelazan para acompañar procesos de sanación.',
     duration: 'Variable',
-    price: 'Variable según ceremonia',
     includes: [
       'Ritual de cacao y otras medicinas naturales',
       'Sanación colectiva',
@@ -160,7 +149,6 @@ export const workshops: Workshop[] = [
     modality: 'Vía Zoom',
     capacity: 'Cupo limitado: 8 personas',
     audience: 'Para principiantes y practicantes',
-    price: '$444 MXN',
     status: 'available'
   },
   {
