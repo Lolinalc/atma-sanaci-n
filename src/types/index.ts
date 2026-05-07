@@ -4,8 +4,6 @@ export interface Service {
   title: string;
   description: string;
   duration?: string;
-  price: string;
-  priceInternational?: string;
   features?: string[];
   cta: string;
   ctaLink: string;
@@ -16,7 +14,6 @@ export interface Ceremony {
   title: string;
   description: string;
   duration: string;
-  price: string;
   includes?: string[];
   image?: string;
 }
@@ -27,7 +24,6 @@ export interface Workshop {
   description: string;
   date?: string;
   time?: string;
-  price?: string;
   modality?: string;
   capacity?: string;
   audience?: string;
