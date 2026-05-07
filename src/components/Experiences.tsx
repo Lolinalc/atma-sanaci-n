@@ -189,9 +189,7 @@ Te acompaño a recordar tu poder personal y escuchar el susurro de tu alma      
                                 <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                               </svg>
                               <span>{ceremony.duration}</span>
-                            </div>
-                            <p className="font-semibold text-lg text-atma-navy">{ceremony.price}</p>
-                          </div>
+                        
                         </motion.div>
                       </div>
 
@@ -281,9 +279,7 @@ Te acompaño a recordar tu poder personal y escuchar el susurro de tu alma      
                     {workshop.audience && (
                       <p className="text-xs">{workshop.audience}</p>
                     )}
-                    {workshop.price && (
-                      <p className="text-lg font-semibold text-atma-navy mt-2">{workshop.price}</p>
-                    )}
+                  
                   </div>
                 )}
 
