@@ -92,18 +92,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
               )}
             </div>
 
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-atma-navy">
-                  {service.price}
-                </span>
-                {service.priceInternational && (
-                  <span className="text-sm text-atma-slate">
-                    Internacional: {service.priceInternational}
-                  </span>
-                )}
-              </div>
-            </div>
+         
           </div>
         </motion.div>
       </div>
