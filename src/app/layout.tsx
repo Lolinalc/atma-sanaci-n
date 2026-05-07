@@ -105,7 +105,6 @@ export default function RootLayout({
                 latitude: 19.5438,
                 longitude: -96.9102,
               },
-              priceRange: '$$',
               telephone: siteConfig.contact.whatsapp,
               openingHoursSpecification: [
                 {
