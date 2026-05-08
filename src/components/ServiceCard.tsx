@@ -92,7 +92,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
               )}
             </div>
 
-         
+
           </div>
         </motion.div>
       </div>
