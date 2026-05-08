@@ -71,10 +71,8 @@ export const services: Service[] = [
     duration: '2-3 sesiones semanales por 1 mes',
     features: [
       '1 o 2 sesiones semanales',
-      'Sesión suelta $350',
-      '1 X semana $1600',
-      '2 x semana $3000',
-      'Incluye 1 sesión de terapia de biodescofidicación'
+      'Incluye 1 sesión de terapia de biodescofidicación',
+      'Sesión suelta'
     ],
     cta: 'Iniciar proceso',
     ctaLink: 'https://wa.me/529993676677?text=Hola%2C%20estoy%20interesada%20en%20el%20Proceso%20Personalizado%20de%20Yin%20Yoga.%20%C2%BFMe%20podr%C3%ADas%20dar%20m%C3%A1s%20informaci%C3%B3n%3F'
